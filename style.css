@@ -24,8 +24,60 @@ body {
   overflow: hidden;
 }
 
+.gift_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .hidden {
   display: none;
+}
+
+.workshop {
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.workshop-form {
+  max-width: 500px;
+  text-align: left;
+  flex: 1;
+}
+
+.workshop-form input, .workshop-form select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 17px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.workshop-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #a37759;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.workshop-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.card {
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 .clear {
@@ -35,6 +87,25 @@ body {
 .container {
   max-width: 1170px;
 }
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .workshop-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .card {
+    width: 80%; /* Increase width of cards for better mobile visibility */
+    margin-bottom: 20px;
+  }
+
+  .workshop-form {
+    width: 100%; /* Ensure form takes full width on smaller screens */
+    max-width: 100%;
+  }
+}
+
 
 @media only screen and (max-width: 767px) {
   .container {
@@ -1466,12 +1537,13 @@ h6 {
   color: #fff;
   padding: 0 25px;
   display: inline-block;
-  border-radius: 0;
+  border-radius: 10px;
   height: 45px;
   line-height: 43px;
   letter-spacing: 2px;
   border: 1px solid #fff;
   background: inherit;
+  background-color: #857353;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1662,7 +1734,7 @@ h6 {
   height: 45px;
   line-height: 40px;
   text-align: center;
-  border: 2px solid #fff;
+  border: none;
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
@@ -1795,6 +1867,7 @@ h6 {
 .product_carousel .product_thumb a img {
   width: inherit;
   margin: 0 auto;
+  border-radius: 10px;
 }
 @media only screen and (max-width: 767px) {
   .product_carousel .product_thumb a img {
@@ -2110,6 +2183,7 @@ figure {
 
 .banner_thumb a img {
   transition: 0.3s;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2829,6 +2903,7 @@ figure {
 /* *********************** */
 
 .footer_widgets {
+  width: 100%;
   background: #1c1d22;
 }
 
@@ -2905,6 +2980,18 @@ figure {
   }
 }
 
+.footer_menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_menu ul li{
+  flex: 1 1 20%;
+  margin: 10px;
+}
 .footer_menu ul li a {
   display: block;
   font-weight: 400;
@@ -3121,6 +3208,9 @@ figure {
   font-weight: 400;
 }
 
+.fa{
+  font-size: 1.5em;
+}
 .modal_social ul li.facebook a {
   background: #3c5b9b;
 }
@@ -3333,7 +3423,9 @@ figure {
   opacity: 0;
   visibility: hidden;
 }
-
+.owl-carousel .owl-item img{
+  border-radius: 10px;
+}
 .product_navactive.owl-carousel .owl-nav div:hover {
   background: #f6692a;
   color: #000000 !important;

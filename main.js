@@ -399,3 +399,12 @@
 
   $(".select_option").niceSelect();
 })(jQuery);
+
+function isNumberKey(evt) {
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  // Chỉ cho phép các số từ 0-9
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+  }
+  return true;
+}
