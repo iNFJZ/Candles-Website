@@ -68,19 +68,38 @@ body {
 }
 
 .workshop-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Allow wrapping of items */
+  display: flex; 
+  justify-content: center;
+  align-items: center;                           
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .card {
-  width: 25%;
+  flex: 1;
+  max-width: 300px;
   text-align: center;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
 }
 
+.workshop-form{
+  flex: 2;
+}
+
+.card img{
+  width: 500%;
+  height: 400px;
+  object-fit: cover;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workshop-container img {
+  width: 100%;
+}
 .clear {
   clear: both;
 }
@@ -1113,9 +1132,10 @@ h6 {
 
 .main_menu nav > ul {
   display: flex;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   justify-content: flex-end;
 }
+
 .main_menu nav > ul > li {
   position: relative;
   flex-shrink: 0;
@@ -1136,7 +1156,7 @@ h6 {
 }
 .main_menu nav > ul > li > a {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   padding: 10px 23px;
   text-transform: uppercase;
@@ -1235,6 +1255,7 @@ h6 {
 }
 
 .menu_two nav > ul > li > a.active {
+  margin-top: -3px;
   color: #f6692a;
 }
 
@@ -1287,7 +1308,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
 .header_top_right .header_right_info {
@@ -2645,6 +2666,7 @@ figure {
 
 .single_testimonial {
   text-align: center;
+  padding: auto;
 }
 
 /* ****************************** */
